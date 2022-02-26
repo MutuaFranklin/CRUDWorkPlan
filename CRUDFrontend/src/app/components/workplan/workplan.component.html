@@ -12,7 +12,7 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h6 class="modal-title" id="exampleModalLongTitle">Add a new goal</h6>
+                <h4 class="modal-title" id="exampleModalLongTitle">Add a new goal</h4>
                 <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -71,8 +71,8 @@
           <tr *ngFor="let item of workplan_goals; let i =index">
             <td>{{i+1}} </td>
             <td>{{item.goal}}</td>
-            <td>{{item.start_time}}</td>
-            <td>{{item.end_time}}</td>
+            <td class="start_date">{{item.start_time}}</td>
+            <td class="end_date">{{item.end_time}}</td>
             <td class="button"><button type="button" class="btn btn-success" (click)='viewGoal(item.id)'>View
                 details</button></td>
             <!-- <td><button type="button" class="btn btn-warning" (click)='goToEdit(event.id)'>Edit</button></td> -->

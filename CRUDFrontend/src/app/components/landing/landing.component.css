@@ -36,6 +36,14 @@ button{
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+
+  .landing{
+    height: 100%;
+    background-image: url(../../../assets/wp2.jpg);
+  }
+}
+
 
 
 

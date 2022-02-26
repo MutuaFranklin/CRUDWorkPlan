@@ -35,6 +35,11 @@
   justify-content: center;
 }
 
+button{
+  font-size: 17px;
+
+}
+
 
 table {
   font-family: 'Redressed', cursive;
@@ -58,12 +63,16 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 tr:nth-child(odd) {
-  background-color: #1a1b1a;
+  background-color: rgb(15, 14, 14, 0.9);
   color: white;
 }
 th{
   color: white;
   background-color: none;
+}
+
+form{
+  font-size: 20px;
 }
 
 
@@ -72,4 +81,25 @@ th{
   background-color: white;
   height: 100%;
   color: black;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  table{
+    font-size: 12px !important;
+  }
+
+   button{
+    font-size: 12px !important;
+
+  }
+  .workplan{
+    background-image:url(../../../assets/wp1.jpg);
+
+  }
+
+  /* linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), */
+
 }
