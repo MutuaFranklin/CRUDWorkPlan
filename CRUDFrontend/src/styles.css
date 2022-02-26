@@ -4,3 +4,6 @@ body, html {
   height: 100%;
   font-family: 'Redressed', cursive;
 }
+div {
+  white-space: pre-line;
+}

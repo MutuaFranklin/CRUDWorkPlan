@@ -52,6 +52,7 @@ export class WorkplanGoalComponent implements OnInit {
           // console.log(response)
           this.single_goal = response
         resolve()
+
       },
 
       (error:string) => {
@@ -77,17 +78,7 @@ export class WorkplanGoalComponent implements OnInit {
       })
     })
 
-    // this.workplanService.workPlanGoal(id).subscribe( response => {
-    // //   this.editWorkPlanForm = new FormGroup({
-    // //     goal: new FormControl(''),
-    // //     objectives: new FormControl(''),
-    // //     start_time: new FormControl(''),
-    // //     end_time: new FormControl(''),
-    // //     strategy: new FormControl(''),
-    // //     resources: new FormControl(''),
     
-    
-    // //   });
 
   }
 
