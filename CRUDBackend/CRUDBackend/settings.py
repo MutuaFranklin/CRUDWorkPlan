@@ -86,6 +86,7 @@ CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:4200',
+    ''
 )
 
 CSRF_TRUSTED_ORIGINS = [
@@ -151,8 +152,6 @@ DATABASES['default'].update(db_from_env)
 
 
 # Password validation
-# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',

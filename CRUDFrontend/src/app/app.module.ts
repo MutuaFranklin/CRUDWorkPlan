@@ -9,6 +9,8 @@ import { WorkplanComponent } from './components/workplan/workplan.component';
 import { WorkplanGoalComponent } from './components/workplan-goal/workplan-goal.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgHttpLoaderModule } from 'ng-http-loader';
+
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgHttpLoaderModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
