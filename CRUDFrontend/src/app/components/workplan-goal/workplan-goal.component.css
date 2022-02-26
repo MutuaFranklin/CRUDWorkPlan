@@ -1,0 +1,55 @@
+.single-goal{
+  height: 100%;
+  background-image: url(../../../assets/wp1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workplan-detail{
+  display: flex;
+  justify-content: center;
+  height: 80%;
+}
+
+
+.details{
+  background-color: rgb(236, 235, 250);
+  height: 100%;
+
+}
+
+.details h5 , .details h6{
+  text-align: center;
+}
+
+.objectives, .strategy, .resources{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  background-color: gainsboro;
+  height: 100%;
+}
+
+.rw{
+  display: flex;
+  justify-content: center;
+}
+
+.rw button{
+  width: 80px;
+}
+
+.main{
+  height: 700px;
+}
+
+.modal-header h6{
+  text-align: center;
+}

@@ -1,0 +1,105 @@
+<div class="container-fluid single-goal">
+  <app-navbar></app-navbar>
+
+  <div class="col-md-12 workplan-detail">
+    <div class="col-md-9 details m-5">
+      <div class="main">
+        <button type="button" class="btn btn-warning btn-sm m-3" (click)='goBack()'>Back</button>
+
+        <h5 class="m-3">{{single_goal.goal}} WorkPlan</h5>
+        <h6>Duration: {{single_goal.start_time}} to {{single_goal.end_time}}  </h6>
+        <div class="row mt-3">
+          <div class="col-md-4 objectives">
+            <h6>Objectives</h6>
+            <div class="content m-3">
+              <p>{{single_goal.objectives}}</p>
+
+            </div>
+
+          </div>
+          <div class="col-md-4 strategy">
+            <h6>Strategy</h6>
+            <div class="content m-3">
+              <p>{{single_goal.strategy}}</p>
+
+            </div>
+
+
+          </div>
+          <div class="col-md-4 resources">
+            <h6>Resources</h6>
+            <div class="content m-3">
+              <p>{{single_goal.resources}}</p>
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="rw">
+        <button type="button" class="btn btn-info btn-sm m-3" data-bs-toggle="modal" data-bs-target="#editModal">Edit</button>
+        <button type="button" class="btn btn-danger btn-sm m-3" (click)='deleteWorkPlan()'>Delete</button>
+      </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLongTitle">Edit {{single_goal.goal}} WorkPlan </h6>
+                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form (ngSubmit)="EditWorkPlan()" method="post" enctype="multipart/form-data"  [formGroup]="editWorkPlanForm">
+                  <div class="form-floating mb-3 info">
+                    <input type="text" formControlName="goal" name="goal" value="{{single_goal.goal}}" class="form-control"
+                      id="floatingInput"/>
+                    <label for="floatingInput">Goal</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <textarea type="text" formControlName="objectives" name="objectives"  class="form-control"
+                      id="floatingInput"></textarea>
+                    <label for="floatingInput">Objectives</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <input type="date" formControlName="start_time" name="start_time"  value="{{single_goal.start_time}}" class="form-control"
+                      id="floatingInput"/>
+                    <label for="floatingInput">Start Date</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <input type="date" formControlName="end_time" name="end_time" class="form-control"
+                      id="floatingInput" placeholder="End Date" />
+                    <label for="floatingInput">End date</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <textarea type="text" formControlName="strategy" name="strategy"  value="{{single_goal.strategy}}" class="form-control"
+                      id="floatingInput"></textarea>
+                    <label for="floatingInput">Strategy</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <textarea type="text" formControlName="resources" name="objectives" class="form-control"
+                      id="floatingInput"></textarea>
+                    <label for="floatingInput">Resources</label>
+                  </div>
+
+
+                  <button class="btn btn-sm btn-success upload-btn" type="submit">Update</button>
+
+                </form>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+  </div>
+</div>

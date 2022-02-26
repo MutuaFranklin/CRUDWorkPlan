@@ -1,0 +1,75 @@
+.workplan{
+  height: 100%;
+  background-image: url(../../../assets/wp4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.goals{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* color: white; */
+  height: 80%;
+
+
+}
+
+
+
+.goals h5{
+  text-align: center;
+  color: white;
+}
+
+.workplan-goals{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+}
+
+
+table {
+  font-family: 'Redressed', cursive;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+th{
+  color: white;
+  background-color: none;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr:nth-child(odd) {
+  background-color: #1a1b1a;
+  color: white;
+}
+th{
+  color: white;
+  background-color: none;
+}
+
+
+
+.details{
+  background-color: white;
+  height: 100%;
+  color: black;
+}

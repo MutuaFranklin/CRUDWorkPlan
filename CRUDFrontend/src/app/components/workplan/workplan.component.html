@@ -1,0 +1,88 @@
+<div class="container-fluid workplan">
+  <app-navbar></app-navbar>
+
+  <div class="col-md-12  goals">
+    <h5>WorkPlan</h5>
+      <div class="col-md-10 workplan-goals">
+        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#workPlanModal">Add New Goal</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="workPlanModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h6 class="modal-title" id="exampleModalLongTitle">Add a new goal</h6>
+                <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="" method="post" enctype="multipart/form-data" novalidate>
+                  <div class="form-floating mb-3 info">
+                    <input type="text" [(ngModel)]="workplan.goal" name="goal" class="form-control username"
+                      id="floatingInput"/>
+                    <label for="floatingInput">Goal</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <textarea type="text" [(ngModel)]="workplan.objectives" name="objectives" class="form-control username"
+                      id="floatingInput"></textarea>
+                    <label for="floatingInput">Objectives</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <input type="date" [(ngModel)]="workplan.start_time" name="start_time" class="form-control username"
+                      id="floatingInput"/>
+                    <label for="floatingInput">Start Date</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <input type="date" [(ngModel)]="workplan.end_time" name="end_time" class="form-control username"
+                      id="floatingInput" placeholder="End Date" />
+                    <label for="floatingInput">End date</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <textarea type="text" [(ngModel)]="workplan.strategy" name="strategy" class="form-control username"
+                      id="floatingInput"></textarea>
+                    <label for="floatingInput">Strategy</label>
+                  </div>
+                  <div class="form-floating mb-3 info">
+                    <textarea type="text" [(ngModel)]="workplan.resources" name="objectives" class="form-control username"
+                      id="floatingInput"></textarea>
+                    <label for="floatingInput">Resources</label>
+                  </div>
+
+
+                  <button class="btn btn-sm btn-success upload-btn" (click)="publishWorkPlan()">Publish</button>
+
+                </form>
+
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table class="m-5">
+          <tr>
+            <th>Index</th>
+            <th>Goal</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+          </tr>
+          <tr *ngFor="let item of workplan_goals; let i =index">
+            <td>{{i+1}} </td>
+            <td>{{item.goal}}</td>
+            <td>{{item.start_time}}</td>
+            <td>{{item.end_time}}</td>
+            <td class="button"><button type="button" class="btn btn-success" (click)='viewGoal(item.id)'>View
+                details</button></td>
+            <!-- <td><button type="button" class="btn btn-warning" (click)='goToEdit(event.id)'>Edit</button></td> -->
+          </tr>
+        </table>
+
+
+
+    </div>
+
+  </div>
+
+</div>

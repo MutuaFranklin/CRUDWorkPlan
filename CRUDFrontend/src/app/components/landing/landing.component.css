@@ -1,0 +1,41 @@
+.landing{
+  height: 100%;
+  background-image: url(../../../assets/wp5.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main{
+  height: 88%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  color: white;
+}
+
+.crud{
+  margin: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.crud p{
+  font-size: 20px;
+}
+
+button{
+  font-size: 16px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+
+
+
