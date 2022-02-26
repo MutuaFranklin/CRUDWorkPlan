@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 export class WorkplanService {
 
   apiUrl: string = environment.URL;
+  httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
 
   constructor(private http: HttpClient) {
@@ -29,7 +30,7 @@ export class WorkplanService {
   }
 
   updateWorkPlanGoal(goalDetails:any, id:any):Observable<any>{
-    return this.http.put<any[]>(this.apiUrl + `workplan-goal/${id}`, goalDetails )
+    return this.http.put<any[]>(this.apiUrl + `workplan-goal/${id}`, goalDetails, {headers: this.httpHeaders})
 
   }
 

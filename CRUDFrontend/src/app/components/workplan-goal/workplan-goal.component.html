@@ -55,12 +55,11 @@
               <div class="modal-body">
                 <form (ngSubmit)="EditWorkPlan()" method="post" enctype="multipart/form-data"  [formGroup]="editWorkPlanForm">
                   <div class="form-floating mb-3 info">
-                    <input type="text" formControlName="goal" name="goal" value="{{single_goal.goal}}" class="form-control"
-                      id="floatingInput"/>
+                    <input type="text"  formControlName="goal" class="form-control" id="floatingInput" value="{{single_goal.goal}}"/>
                     <label for="floatingInput">Goal</label>
                   </div>
                   <div class="form-floating mb-3 info">
-                    <textarea type="text" formControlName="objectives" name="objectives"  class="form-control"
+                    <textarea type="text"  name="objectives" formControlName="objectives" value="{{single_goal.objectives}}"  class="form-control"
                       id="floatingInput"></textarea>
                     <label for="floatingInput">Objectives</label>
                   </div>

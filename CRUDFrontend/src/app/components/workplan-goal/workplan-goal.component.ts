@@ -13,7 +13,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./workplan-goal.component.css']
 })
 export class WorkplanGoalComponent implements OnInit {
-
+  selectedWorkplan!: Workplan;
   single_goal:any;
   error:any;
   workplan:any;
@@ -56,15 +56,46 @@ export class WorkplanGoalComponent implements OnInit {
 
       (error:string) => {
 
+      }),
+      this.workplanService.workPlanGoal(id).toPromise().then(
+        (response:any) => {
+          this.editWorkPlanForm = new FormGroup({
+                goal: new FormControl(response['goal']),
+                objectives: new FormControl(response['objectives']),
+                start_time: new FormControl(response['start_time']),
+                end_time: new FormControl(response['end_time']),
+                strategy: new FormControl(response['strategy']),
+                resources: new FormControl(response['resources']),
+            
+            
+              });
+        resolve()
+      },
+
+      (error:string) => {
+
       })
     })
+
+    // this.workplanService.workPlanGoal(id).subscribe( response => {
+    // //   this.editWorkPlanForm = new FormGroup({
+    // //     goal: new FormControl(''),
+    // //     objectives: new FormControl(''),
+    // //     start_time: new FormControl(''),
+    // //     end_time: new FormControl(''),
+    // //     strategy: new FormControl(''),
+    // //     resources: new FormControl(''),
+    
+    
+    // //   });
+
   }
 
   EditWorkPlan(){
     let id = this.route.snapshot.paramMap.get('id');
-    this.workplanService.updateWorkPlanGoal(this.workplan, id).subscribe( response => {
+    this.workplanService.updateWorkPlanGoal(this.editWorkPlanForm.value, id).subscribe( response => {
       console.log(response)
-      alert("New workplan goal has been published"),
+      alert("workplan goal has been successfully updated"),
       window.location.reload();
 
 
