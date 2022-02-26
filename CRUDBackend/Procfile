@@ -1,0 +1,1 @@
+web: gunicorn cTicketing.wsgi --log-file -
