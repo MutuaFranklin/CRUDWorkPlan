@@ -41,6 +41,11 @@ button{
   .landing{
     height: 100%;
     background-image: url(../../../assets/wp2.jpg);
+    font-size: 14px;
+  }
+
+  p{
+    font-size: 17px !important;
   }
 }
 
