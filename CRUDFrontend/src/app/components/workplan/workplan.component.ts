@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Workplan } from 'src/app/models/workplan';
 import { WorkplanService } from 'src/app/services/workplan.service';
 
+
 @Component({
   selector: 'app-workplan',
   templateUrl: './workplan.component.html',

@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Workplan } from 'src/app/models/workplan';
 import { WorkplanService } from 'src/app/services/workplan.service';
 import { Location } from '@angular/common';
 import { FormGroup, FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -13,6 +13,7 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./workplan-goal.component.css']
 })
 export class WorkplanGoalComponent implements OnInit {
+
   selectedWorkplan!: Workplan;
   single_goal:any;
   error:any;
@@ -67,8 +68,8 @@ export class WorkplanGoalComponent implements OnInit {
                 end_time: new FormControl(response['end_time']),
                 strategy: new FormControl(response['strategy']),
                 resources: new FormControl(response['resources']),
-            
-            
+
+
               });
         resolve()
       },
@@ -78,7 +79,7 @@ export class WorkplanGoalComponent implements OnInit {
       })
     })
 
-    
+
 
   }
 

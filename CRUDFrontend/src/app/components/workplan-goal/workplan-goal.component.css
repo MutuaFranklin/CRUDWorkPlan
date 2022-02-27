@@ -32,7 +32,6 @@
 
 .content{
   display: flex;
-  justify-content: center;
   background-color: rgb(63, 59, 59, 0.3);
   height: 100%;
   width: 95%;

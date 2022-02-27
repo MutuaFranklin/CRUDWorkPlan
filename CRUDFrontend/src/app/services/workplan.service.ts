@@ -6,7 +6,6 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class WorkplanService {
-
   apiUrl: string = environment.URL;
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 

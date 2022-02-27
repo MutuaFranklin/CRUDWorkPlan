@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Spinkit } from 'ng-http-loader';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,4 +10,5 @@ import { Spinkit } from 'ng-http-loader';
 export class AppComponent {
   title = 'CRUDFrontend';
   public spinkit = Spinkit;
+
 }
