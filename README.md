@@ -53,7 +53,16 @@ in the CRUDWorkPlan directory Open CRUDBackend in terminal and run : pip install
 ```
 
 ```
-Run source virtual/bin/activate to activate the virtual environment and python manage.py runserver to launch the app
+Run source virtual/bin/activate to activate the virtual environment and python manage.py runserver to launch the server side
+
+```
+```
+in the CRUDWorkPlan directory Open CRUDFrontend in terminal and run : npm install to install dependencies
+
+```
+
+```
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ```
 
@@ -85,7 +94,7 @@ Live API Documentation link: [CRUDWorkPlan API Documentation](https://crudworkpl
 
 For any remarks,questions or advise feel free to contact me:
 
-Email: [franklinngumbi@gmail.com ](franklinngumbi@gmail.com)
+Email: [franklinmutua@outlook.com ](franklinmutua@outlook.com)
 
 ## License
 
